@@ -31,11 +31,13 @@ function Klimas(){
     )
 
     return(
-        <>
-            {info.map(klima => <Klima name={klima.name} state={klima.state} country={klima.country} />)}
-            <Klima temp={parseInt(temperatur.temp) + "ºC"} max={temperatur.max} min={temperatur.min} />
-            {wetter.map(wetter => <Klima description={wetter.description} main={wetter.main} />)} 
-        </>
+        <div className="widget">
+            <div className="widgetIn">
+                {info.map(klima => <Klima name={klima.name} state={klima.state} country={klima.country} />)}
+                <Klima temp={parseInt(temperatur.temp) + "ºC"} max={temperatur.max} min={temperatur.min} />
+                {wetter.map(wetter => <Klima description={wetter.description} main={wetter.main} icon={wetter.icon} />)} 
+            </div>
+        </div>
     )
 
 }

@@ -1,6 +1,6 @@
-function Klima( {name, country, state, main, description, temp, min, max} ){
+function Klima( {name, country, state, main, description, temp, min, max, icon} ){
     return(
-        <div className="widget">
+        <div>
             <h1>{name}</h1>
             <h2>{state}</h2>
             <h2>{country}</h2>
